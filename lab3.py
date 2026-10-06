@@ -1,3 +1,6 @@
+# Лабораторна робота №3
+# Консольний мінімагазин
+
 products = {
     1: {"name": "Ноутбук", "price": 25000.00, "stock": 5},
     2: {"name": "Мишка", "price": 450.50, "stock": 15},
@@ -17,7 +20,7 @@ format_price = lambda price: f"{price:.2f} грн"
 
 # Перегляд каталогу товарів
 def show_catalog():
-    print("\n=== КАТАЛОГ ТОВАРІВ ===")
+    print("\n КАТАЛОГ ТОВАРІВ ")
 
     for product_id, product in products.items():
         print(
@@ -29,7 +32,7 @@ def show_catalog():
 
 # Перегляд кошика
 def show_cart():
-    print("\n=== КОШИК ===")
+    print("\n КОШИК ")
 
     if not cart:
         print("Кошик порожній.")
@@ -181,9 +184,11 @@ def main():
             admin_panel()
         elif choice == "0":
             print("Дякуємо за відвідування магазину!")
+            break
         else:
             print("Невірний пункт меню.")
 
 
 if __name__ == "__main__":
     main()
+    
